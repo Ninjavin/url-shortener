@@ -4,6 +4,8 @@ A production-oriented URL shortener built with Spring Boot, PostgreSQL, Redis, D
 
 The interesting part of this project is the ID generation strategy. Instead of generating random short codes and checking for collisions, each backend instance reserves a batch of numeric IDs from Redis, converts them to Base62, and persists the mapping in PostgreSQL. That keeps the app stateless, reduces Redis traffic, and scales cleanly across multiple backend containers.
 
+https://github.com/user-attachments/assets/65cb7819-fa39-44ab-8bb2-83117786844b
+
 ## Architecture
 
 ```text
